@@ -1,4 +1,6 @@
 Statsfaq::Application.routes.draw do
+  get "faqs/new"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
