@@ -7,10 +7,6 @@ class FaqsController < ApplicationController
     @faq = Faq.find(params[:id])
   end
 
-  def index
-
-  end
-
   def create
     @faq = Faq.new(params[:faq])
     if @faq.save

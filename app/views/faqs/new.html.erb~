@@ -10,10 +10,6 @@
     <%= f.label :answer %><br/>
     <%= f.text_field :answer, :class => "tfield"  %>
   </div>
-  <div class="field">
-    <%= f.label :sport %><br/>
-    <%= f.select :sport, ["NFL", "NBA", "MLB", "NHL"] %>
-  </div>
   <div class="actions">
     <%= f.submit "Add" %>
   </div>

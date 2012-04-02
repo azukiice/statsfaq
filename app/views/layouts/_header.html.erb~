@@ -1,0 +1,8 @@
+<header>
+  <%= link_to logo, root_path %>
+  <nav class="round">
+    <ul>
+      <li>links here</li>
+    </ul>
+  </nav>
+</header>
