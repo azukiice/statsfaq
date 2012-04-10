@@ -1,0 +1,26 @@
+<table class="faqlist">
+  
+    <%= @sports.each do |sport| %>
+      
+        <%= check_box_tag "selected_sports[#{sport}]", 1 %>
+        <%= sport %>
+     
+    <% end %>
+  
+  <br>
+
+  <% unless @faqs.empty? %>
+    <%= @faqs.each do |qanda| %>
+      <tr class="question">
+        <td>
+	  Q: <%= qanda.question %>
+        </td>
+      </tr>
+      <tr class="answer">
+        <td>
+	  A: <%= qanda.answer %>
+        </td>
+      </tr>
+    <% end %>
+  <% end %>
+</table>
