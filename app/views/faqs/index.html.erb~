@@ -3,7 +3,7 @@
     <%= @sports.each do |sport| %>
       
       <%= check_box_tag "selected[#{sport}]", 1, 
-	  @selected_sports.include?(sport) %>
+	  @selected_ratings.include?(sport) %>
       <%= sport %>
      
     <% end %>

@@ -1,8 +1,7 @@
 class FaqsController < ApplicationController
   def new
     @faq = Faq.new
-    @sports = ["NFL", "MLB", "NBA", "NHL", "Soccer", 
-    	    "Golf", "Racing", "Tennis"]
+    @sports = Faq.all_sports
   end
 
   def show
@@ -10,8 +9,13 @@ class FaqsController < ApplicationController
   end
 
   def index
-    @faqs = Faq.all
-    
+    @selected_sports = params[:selected]
+    if @selected_sports
+      @faqs = Faq.find_all_by_sport(@selected_sports.keys)
+    else
+      @faqs = Faq.all
+    end
+    @sports = Faq.all_sports
   end
 
   def create

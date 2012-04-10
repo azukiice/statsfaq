@@ -9,7 +9,12 @@ class FaqsController < ApplicationController
   end
 
   def index
-    @faqs = Faq.all
+    @selected_sports = params[:selected] || {}
+    unless @selected_sports.empty?
+      @faqs = Faq.find_all_by_sport(@selected_sports.keys)
+    else
+      @faqs = Faq.all
+    end
     @sports = Faq.all_sports
   end
 

@@ -139,13 +139,13 @@ td.sidebar {
     background: #ffc;
 }
 
-tr.question {
-    width: 100%;
+section.question {
+    font-style: bold;
     background: #DDD;
 }
 
-tr.answer {
-    width: 100%;
+section.answer {
+    
     background: #99c;
 }
 
