@@ -1,9 +1,9 @@
 .container {
-   width: 710px;
+   width: 800px;
 }
 
 body {
-   background: #fa4;
+   background: #555;
 }
 
 header {
@@ -12,7 +12,7 @@ header {
 
 header img {
    padding: 1em;
-   background: #fff;
+   background: #555;
 }
 
 section {
@@ -24,6 +24,13 @@ section {
 
 section h1 {
    font-size: 200%;
+}
+
+table.faqlist {
+   cellpadding: 3px;
+   cellspacing: 3px;
+   border: 2px solid #FFFFFF;
+   
 }
 
 /*Links*/
@@ -130,6 +137,16 @@ td.sidebar {
     padding: 1em;
     vertical-align: top;
     background: #ffc;
+}
+
+tr.question {
+    width: 100%;
+    background: #DDD;
+}
+
+tr.answer {
+    width: 100%;
+    background: #99c;
 }
 
 .profile img.gravatar {

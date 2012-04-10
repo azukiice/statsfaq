@@ -1,9 +1,9 @@
 .container {
-   width: 710px;
+   width: 800px;
 }
 
 body {
-   background: #fa4;
+   background: #666;
 }
 
 header {
@@ -12,7 +12,7 @@ header {
 
 header img {
    padding: 1em;
-   background: #fff;
+   background: #666;
 }
 
 section {
@@ -24,6 +24,13 @@ section {
 
 section h1 {
    font-size: 200%;
+}
+
+table.faqlist {
+   cellpadding: 3px;
+   cellspacing: 3px;
+   border: 2px solid #FFFFFF;
+   
 }
 
 /*Links*/
@@ -132,6 +139,16 @@ td.sidebar {
     background: #ffc;
 }
 
+tr.question {
+    width: 100%;
+    background: #DDD;
+}
+
+tr.answer {
+    width: 100%;
+    background: #99c;
+}
+
 .profile img.gravatar {
     border: 1px solid #999;
     margin-bottom: -15px;
@@ -142,7 +159,7 @@ div.field, div.actions {
 
 }
 
-.faq_question {
+.tfield {
     width: 300px;
     height: 200px;
     min-width: 300px;
@@ -151,14 +168,6 @@ div.field, div.actions {
     max-height: 200px;
 }
 
-.faq_answer {
-    width: 300px;
-    height: 200px;
-    min-width: 300px;
-    max-width: 300px;
-    min-height: 200px;
-    max-height: 200px;
-}
 
 .field_with_errors {
     margin-top: 10px;
