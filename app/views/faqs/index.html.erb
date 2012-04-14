@@ -7,9 +7,13 @@
       <%= sport %>
      
     <% end %>
+  <div class="field">    
+    <%= text_field_tag :search, params[:search], :size => "120" %>
+  </div>
+
 
   <div class="actions">
-    <%= submit_tag "Filter", :id => "sports_submit"  %>
+    <%= submit_tag "Filter", :id => "sports_submit", :name => nil  %>
   </div>
 <% end %>
   
@@ -19,12 +23,18 @@
 
   <% unless @faqs.empty? %>
     <%= @faqs.each do |qanda| %>
-      <section class="question">
+    <table class="faqset">
+      <tr class="question"><td>
 	  Q: <%= qanda.question %>
-      </section>
-      <section class="answer">
+      </td></tr>
+      <tr class="answer"><td>
 	  A: <%= qanda.answer %>
-      </section>
+      </td></tr>
+      <tr class="qafooter"><td>
+	  Sport: <%= qanda.sport %> Posted: <%= qanda.created_at %>
+      </td></tr>
+      </table>
+      <br>
     <% end %>
   <% end %>
 </section>

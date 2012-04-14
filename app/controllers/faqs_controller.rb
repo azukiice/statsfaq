@@ -9,20 +9,32 @@ class FaqsController < ApplicationController
   end
 
   def index
-    @selected_sports = params[:selected] || {}
-    unless @selected_sports.empty?
-      @faqs = Faq.find_all_by_sport(@selected_sports.keys)
-    else
-      @faqs = Faq.all
-    end
     @sports = Faq.all_sports
+    @selected_sports = params[:selected] || {}
+    @search_field = params[:search] || {}
+
+
+    if @selected_sports.empty? && @search_field.empty? # no filter
+      @faqs = Faq.all
+    elsif @search_field.empty?
+    #only sports buttons utilized
+      @faqs = Faq.find_all_by_sport(@selected_sports.keys)
+    elsif @selected_sports.empty? #only search bar utilized
+      @faqs = Faq.where("question like ?", "%#{@search_field}%")
+    else #both utilized
+      @faqs = Faq.where("question like ? and sport in ?", 
+      	                "%#{@search_field}%",
+			"#{@selected_sports.keys}")
+
+    end
+
   end
 
   def create
     @faq = Faq.new(params[:faq])
     if @faq.save
       @faqs = Faq.all
-      render 'index'
+      redirect_to faqs_path
     else
       render 'new'
     end

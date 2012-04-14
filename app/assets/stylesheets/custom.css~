@@ -26,12 +26,14 @@ section h1 {
    font-size: 200%;
 }
 
-table.faqlist {
+table.faqset {
    cellpadding: 3px;
    cellspacing: 3px;
    border: 2px solid #FFFFFF;
    
 }
+
+  
 
 /*Links*/
 
@@ -140,13 +142,18 @@ td.sidebar {
 }
 
 tr.question {
-    width: 100%;
+    font-style: bold;
     background: #DDD;
 }
 
 tr.answer {
-    width: 100%;
+    
     background: #99c;
+}
+
+tr.qafooter {
+    font-size: 80%;
+    background: #ccc;
 }
 
 .profile img.gravatar {
