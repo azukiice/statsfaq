@@ -1,5 +1,5 @@
 <header>
-  <%= image_tag "STATSDarkBackground.img" %>
+  <%= image_tag "STATSSmall.png" %>
   <nav class="round">
     <ul>
       <li>links here</li>

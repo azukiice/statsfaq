@@ -3,7 +3,7 @@
     <%= @sports.each do |sport| %>
       
       <%= check_box_tag "selected[#{sport}]", 1, 
-	  @selected_sports.include?(sport) %>
+	@selected_sports.include?(sport) %>
       <%= sport %>
      
     <% end %>
@@ -11,13 +11,12 @@
     <%= text_field_tag :search, params[:search], :size => "120" %>
   </div>
 
-
   <div class="actions">
     <%= submit_tag "Filter", :id => "sports_submit", :name => nil  %>
   </div>
 <% end %>
   
-  <br>
+<br>
 
 <section class="faqlist">
 
@@ -25,10 +24,10 @@
     <%= @faqs.each do |qanda| %>
     <table class="faqset">
       <tr class="question"><td>
-	  Q: <%= qanda.question %>
+	  Q: <%= highlight(qanda.question, @search_field) %>
       </td></tr>
       <tr class="answer"><td>
-	  A: <%= qanda.answer %>
+	  A: <%= highlight(qanda.answer, @search_field) %>
       </td></tr>
       <tr class="qafooter"><td>
 	  Sport: <%= qanda.sport %> Posted: <%= qanda.created_at %>

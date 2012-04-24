@@ -20,11 +20,13 @@ class FaqsController < ApplicationController
     #only sports buttons utilized
       @faqs = Faq.find_all_by_sport(@selected_sports.keys)
     elsif @selected_sports.empty? #only search bar utilized
-      @faqs = Faq.where("question like ?", "%#{@search_field}%")
+      @faqs = Faq.where("question like ? or answer like ?", 
+      	      		"%#{@search_field}%", "%#{@search_field}%")
     else #both utilized
-      @faqs = Faq.where("question like ? and sport in ?", 
-      	                "%#{@search_field}%",
-			"#{@selected_sports.keys}")
+      @faqs = Faq.where("(question like ? or question like ?) 
+                         and sport in (?)", 
+      	                "%#{@search_field}%", "%#{@search_field}%",
+			@selected_sports.keys)
 
     end
 

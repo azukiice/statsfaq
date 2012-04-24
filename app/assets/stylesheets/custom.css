@@ -29,12 +29,9 @@ section h1 {
 table.faqset {
    cellpadding: 3px;
    cellspacing: 3px;
-   border: 2px solid #FFFFFF;
-   
+   border: 2px solid #FFFFFF;   
 }
-
-  
-
+ 
 /*Links*/
 
 a {
@@ -49,6 +46,10 @@ a:hover {
 
 a:visited {
    color: #069;
+}
+
+highlight {
+  text-decoration: underline;
 }
 
 /* Navigation */

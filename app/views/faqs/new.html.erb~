@@ -8,7 +8,7 @@
   </div>
   <div class="field">
     <%= f.label :answer %><br/>
-    <%= f.text_field :answer, :size => "120" :row => 6  %>
+    <%= f.text_field :answer, :size => "120", :row => 6  %>
   </div>
   <div class="field">
     <%= f.label :sport %><br/>

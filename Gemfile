@@ -5,21 +5,27 @@ gem 'rails', '3.1.0'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
-
-group :development do
-  gem 'rspec-rails', '2.6.1.beta1'
+# for Heroku deployment - as described in Ap. A of ELLS book
+group :development, :test do
+  gem 'sqlite3'
+  gem 'ruby-debug19', :require => 'ruby-debug'
+  gem 'cucumber-rails'
+  gem 'cucumber-rails-training-wheels'
+  gem 'database_cleaner'
+  gem 'capybara'
+  gem 'launchy'
+  gem 'rspec-rails'
+#  gem 'simplecov', :require => 'false'
+  gem 'webrat'
 end
-
-group :test do
-  gem 'rspec', '2.6'
-  gem 'webrat', '0.7.1'
+group :production do
+  gem 'pg'
 end
-
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
+  gem 'therubyracer'              
   gem 'sass-rails', "  ~> 3.1.0"
   gem 'coffee-rails', "~> 3.1.0"
   gem 'uglifier'
@@ -34,5 +40,4 @@ gem 'jquery-rails'
 # gem 'capistrano'
 
 # To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
-
+gem 'haml'
