@@ -3,7 +3,8 @@
   <head>
     <title>STATS FAQ</title>
     <%= csrf_meta_tag %>
-    <%= render 'layouts/stylesheets' %>
+    <%= stylesheet_link_tag "custom" %>
+    <%= stylesheet_link_tag "blueprint" %>
     <%= javascript_include_tag "application" %>
   </head>
   <body>
