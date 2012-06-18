@@ -27,7 +27,7 @@
 	  Q: <%= highlight(qanda.question, @search_field) %>
       </td></tr>
       <tr class="answer"><td>
-	  A: <%= qanda.answer %>
+	  A: <%= highlight(qanda.answer, @search_field) %>
       </td></tr>
       <tr class="qafooter"><td>
 	  Sport: <%= qanda.sport %> Posted: <%= qanda.created_at %>

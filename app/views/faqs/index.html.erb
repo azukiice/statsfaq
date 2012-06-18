@@ -1,6 +1,6 @@
 
 <%= form_tag(faqs_path, :method => "get", :id => "sports_form") do  %>  
-    <%= @sports.each do |sport| %>
+    <% @sports.each do |sport| %>
       
       <%= check_box_tag "selected[#{sport}]", 1, 
 	@selected_sports.include?(sport) %>
@@ -21,7 +21,7 @@
 <section class="faqlist">
 
   <% unless @faqs.empty? %>
-    <%= @faqs.each do |qanda| %>
+    <% @faqs.each do |qanda| %>
     <table class="faqset">
       <tr class="question"><td>
 	  Q: <%= highlight(qanda.question, @search_field) %>
