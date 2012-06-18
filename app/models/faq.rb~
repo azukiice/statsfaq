@@ -1,7 +1,7 @@
 class Faq < ActiveRecord::Base
 
   def self.all_sports
-    ["MLB","NBA","NFL","NHL","GOLF","TENNIS","SOCCER"]
+    ["MLB","NBA","NFL","NHL","Golf","Tennis","Soccer"]
   end
 
 end
